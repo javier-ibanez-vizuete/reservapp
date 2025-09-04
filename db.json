@@ -1,0 +1,13 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "admin",
+            "email": "admin@admin.com",
+            "password": "adminadmin",
+            "role": "admin",
+            "active": false
+        }
+    ],
+    "posts": [{ "id": 1, "title": "Hola mundo", "content": "Mi primer post" }]
+}
