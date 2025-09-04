@@ -2,12 +2,148 @@
     "users": [
         {
             "id": 1,
-            "name": "admin",
-            "email": "admin@admin.com",
-            "password": "adminadmin",
+            "userName": "admin",
+            "userEmail": "admin@admin.com",
+            "userPassword": "adminadmin",
+            "userPhoneNumber": "987654321",
+            "userAddress": "Calle de la Ruina, 21, Madrid, Madrid",
             "role": "admin",
-            "active": false
+            "isActive": false,
+            "orders": [
+                {
+                    "orderId": "admin-1",
+                    "state": {
+                        "pending": false,
+                        "delivered": false,
+                        "cancelled": false
+                    },
+                    "productsAdded": [
+                        {
+                            "productId": "cocacola-1",
+                            "productName": "Coca Cola",
+                            "productDescription": "Botella de Coca Cola (2L)",
+                            "productQty": 2,
+                            "productPrice": 1.5,
+                            "productSubtotal": 3,
+                            "productTax": 0.25,
+                            "productTotal": ""
+                        }
+                    ],
+                    "discounts": [
+                        {
+                            "couponId": "d1-2025-09-04",
+                            "itemsIncluded": [
+                                {
+                                    "productId": "cocacola-1",
+                                    "productQty": 2
+                                }
+                            ],
+                            "discountType": "percentage",
+                            "discountValue": 15,
+                            "validTo": "2025-09-04"
+                        }
+                    ],
+                    "Subtotal": 3,
+                    "total": 2.25
+                }
+            ],
+            "bookings": [
+                {
+                    "bookingDate": "2025-09-28",
+                    "bookingTime": "13:30",
+                    "customersNumber": 4,
+                    "tableid": "hall-1",
+                    "bookingMadeDate": "2025-09-04",
+                    "bookingMadeTime": "19:13",
+                    "state": {
+                        "pending": true,
+                        "cancelled": false,
+                        "completed": false
+                    },
+                    "xtras": {
+                        "trona": false
+                    },
+                    "cancelledTime": ""
+                }
+            ]
         }
     ],
-    "posts": [{ "id": 1, "title": "Hola mundo", "content": "Mi primer post" }]
+    "products": [
+        {
+            "productId": "cocacola-1",
+            "productName": "Coca Cola",
+            "productDescription": "Botella de Coca Cola (2L)",
+            "productPrice": 1.5,
+            "productTax": 0.25
+        }
+    ],
+    "coupons": [
+        {
+            "couponId": "d1-2025-09-04",
+            "itemsIncluded": [
+                {
+                    "productId": "cocacola-1",
+                    "productQty": 2
+                }
+            ],
+            "discountType": "percentage",
+            "discountValue": 15,
+            "validTo": "2025-09-04"
+        }
+    ],
+    "trolly": {
+        "orderId": "admin-1",
+        "productsAdded": [
+            {
+                "productId": "cocacola-1",
+                "productName": "Coca Cola",
+                "productDescription": "Botella de Coca Cola (2L)",
+                "productQty": 2,
+                "productPrice": 1.5,
+                "productSubtotal": 3,
+                "productTax": 0.25,
+                "productTotal": ""
+            }
+        ],
+        "discounts": [
+            {
+                "couponId": "d1-2025-09-04",
+                "itemsIncluded": [
+                    {
+                        "productId": "cocacola-1",
+                        "productQty": 2
+                    }
+                ],
+                "discountType": "percentage",
+                "discountValue": 15,
+                "validTo": "2025-09-04"
+            }
+        ],
+        "subtotal": 3,
+        "total": 2.25
+    },
+    "booking": {
+        "bookingDate": "2025-09-28",
+        "bookingTime": "13:30",
+        "customersNumber": 4,
+        "tableid": "hall-1",
+        "bookingMadeDate": "2025-09-04",
+        "bookingMadeTime": "19:13",
+        "state": {
+            "pending": false,
+            "cancelled": false,
+            "completed": false
+        },
+        "xtras": {
+            "trona": false
+        },
+        "cancelledTime": ""
+    },
+    "tables": [
+        {
+            "tableId": "hall-1",
+            "tableCapacity": 4,
+            "isBooked": false
+        }
+    ]
 }
